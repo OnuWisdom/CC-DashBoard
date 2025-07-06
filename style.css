@@ -336,6 +336,10 @@ body {
 	cursor: pointer;
 }
 
+.btn:hover {
+	opacity: 0.9;
+}
+
 .primary {
 	background: #7c3aed;
 	color: #ffffff;
@@ -364,18 +368,21 @@ body {
 		flex-wrap: wrap;
 	}
 
-    .header-right i, .date {
-        display: none;
-    }
+	.header-right i {
+		display: none;
+	}
+	/* .header-right i,
+	.date {
+		display: none;
+	} */
 }
 
-
 @media (max-width: 350px) {
-.sidebar {
+	.sidebar {
 		width: 20px;
 	}
 
- .cards {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
- }
+	.cards {
+		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	}
 }

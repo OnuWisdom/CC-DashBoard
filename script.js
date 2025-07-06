@@ -41,4 +41,51 @@ filterButtons.forEach(btn => {
   });
 });
 
+function formatDate(date = new Date()) {
+  const options = { 
+    day: 'numeric', 
+    month: 'short', 
+    year: 'numeric' 
+  };
+  
+  return date.toLocaleDateString('en-US', options);
+}
+
+function updateDate() {
+  const dateElement = document.querySelectorAll('.date');
+
+  dateElement.forEach(date => { 
+    if (date) {
+      date.textContent = formatDate();
+    }
+  })
+}
+
+
+// Update date immediately when page loads
+updateDate();
+
+// Update date every minute to keep it current
+setInterval(updateDate, 60000);
+
+// function updateDate() {
+//   const dateElement = document.querySelector('.date');
+//   const now = new Date();
+  
+//   // Format the date as "DD MMM YYYY"
+//   const options = { 
+//     day: 'numeric', 
+//     month: 'short', 
+//     year: 'numeric' 
+//   };
+  
+//   const formattedDate = now.toLocaleDateString('en-US', options);
+//   dateElement.textContent = formattedDate;
+// }
+
+// // Update date immediately when page loads
+// updateDate();
+
+// // Update date every minute to keep it current
+// setInterval(updateDate, 60000);
 
