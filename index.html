@@ -130,7 +130,7 @@
           </div>
 
           <!-- Card 2 -->
-          <div class="card inprogress">
+          <div class="card inprogress" id="inprogress">
             
             <div class="card-header">
               <div class="info">
@@ -148,13 +148,13 @@
               <span>Price/rate: <b>₦6,000</b></span>
             </div>
             <div class="card-actions">
-              <button type="button" class="btn primary message"><i class="fa-solid fa-message"></i> Message client</button>
-              <button type="button" class="btn completed">Mark as completed</button>
+              <button data-action="message" type="button" class="btn primary message"><i class="fa-solid fa-message"></i> Message client</button>
+              <button data-action="completed" type="button" class="btn completed">Mark as completed</button>
             </div>
           </div>
 
           <!-- Card 3 -->
-          <div class="card completed">
+          <div class="card completed" id="completed">
             
             <div class="card-header">
               <div class="info">
@@ -172,12 +172,12 @@
               <span>Price/rate: <b>₦6,009</b></span>
             </div>
             <div class="card-actions">
-              <button type="button" class="btn primary review">Request a review</button>
+              <button data-action="review" type="button" class="btn primary review">Request a review</button>
             </div>
           </div>
 
           <!-- Card 4 -->
-          <div class="card pending">
+          <div class="card pending" id="pending">
             
             <div class="card-header">
               <div class="info">
@@ -195,13 +195,13 @@
               <span>Price/rate: <b>₦8,000</b></span>
             </div>
             <div class="card-actions">
-              <button type="button" class="btn primary accept">Accept</button>
-              <button type="button" class="btn decline">Decline</button>
+              <button data-action="accept" type="button" class="btn primary accept">Accept</button>
+              <button data-action="decline" type="button" class="btn decline">Decline</button>
             </div>
           </div>
 
           <!-- Card 5 -->
-          <div class="card inprogress">
+          <div class="card inprogress" id="inprogress2">
             
             <div class="card-header">
               <div class="info">
@@ -215,17 +215,17 @@
             </div>
             <div class="card-body">
               <span>Service needed: <b>Makeup for event</b></span>
-              <span>Location: <b>Unilag campus</b></span>
+              <span>Location: <b> Unilag campus</b></span>
               <span>Price/rate: <b>₦8,000</b></span>
             </div>
             <div class="card-actions">
-              <button type="button" class="btn primary message"><i class="fa-solid fa-message"></i> Message client</button>
-              <button type="button" class="btn completed">Mark as completed</button>
+              <button data-action="message" type="button" class="btn primary message" id="message"><i class="fa-solid fa-message"></i> Message client</button>
+              <button data-action="completed" type="button" class="btn completed">Mark as completed</button>
             </div>
           </div>
 
           <!-- Card 6 -->
-          <div class="card declined">
+          <div class="card declined" id="declined">
             
             <div class="card-header">
               <div class="info">
@@ -242,16 +242,12 @@
               <span>Location: <b>Unilag campus</b></span>
               <span>Price/rate: <b>₦6,000</b></span>
             </div>
-            <div class="card-actions">
-              <button type="button" class="btn primary re-accept">Request re-accept</button>
+            <div class="card-actions" id="re-accept">
+              <button data-action="re-accept" type="button" class="btn primary re-accept">Request re-accept</button>
             </div>
           </div>
         </section>
     </main>
-
-
-
-
     </div>
 
     <script src="script.js"></script>
