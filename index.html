@@ -106,7 +106,7 @@
          <!-- Cards grid -->
         <section class="cards">
           <!-- Card 1 -->
-          <div class="card pending">
+          <div class="card pending" id="pending">
             
             <div class="card-header">
               <div class="info">
@@ -116,16 +116,16 @@
                   <div class="date">Sat, 6th June, 2:00pm</div>
                 </div>
               </div>
-             <span class="status-chip">Pending</span>
+             <span class="status-chip accept">Pending</span>
             </div>
             <div class="card-body">
               <span>Service needed: <b>Makeup for event</b></span>
               <span>Location: <b>Unilag campus</b></span>
               <span>Price/rate: <b>₦5,000</b></span>
             </div>
-            <div class="card-actions">
-              <button type="button" class="btn primary">Accept</button>
-              <button type="button" class="btn">Decline</button>
+            <div class="card-actions" id="card-actions">
+              <button data-action="accept" type="button" class="btn primary accept">Accept</button>
+              <button data-action="decline" type="button" class="btn decline">Decline</button>
             </div>
           </div>
 
@@ -148,8 +148,8 @@
               <span>Price/rate: <b>₦6,000</b></span>
             </div>
             <div class="card-actions">
-              <button class="btn primary"><i class="fa-solid fa-message"></i> Message client</button>
-              <button class="btn">Mark as completed</button>
+              <button type="button" class="btn primary message"><i class="fa-solid fa-message"></i> Message client</button>
+              <button type="button" class="btn completed">Mark as completed</button>
             </div>
           </div>
 
@@ -172,7 +172,7 @@
               <span>Price/rate: <b>₦6,009</b></span>
             </div>
             <div class="card-actions">
-              <button class="btn primary">Request a review</button>
+              <button type="button" class="btn primary review">Request a review</button>
             </div>
           </div>
 
@@ -195,8 +195,8 @@
               <span>Price/rate: <b>₦8,000</b></span>
             </div>
             <div class="card-actions">
-              <button class="btn primary">Accept</button>
-              <button class="btn">Decline</button>
+              <button type="button" class="btn primary accept">Accept</button>
+              <button type="button" class="btn decline">Decline</button>
             </div>
           </div>
 
@@ -219,8 +219,8 @@
               <span>Price/rate: <b>₦8,000</b></span>
             </div>
             <div class="card-actions">
-              <button class="btn primary"><i class="fa-solid fa-message"></i> Message client</button>
-              <button class="btn">Mark as completed</button>
+              <button type="button" class="btn primary message"><i class="fa-solid fa-message"></i> Message client</button>
+              <button type="button" class="btn completed">Mark as completed</button>
             </div>
           </div>
 
@@ -243,7 +243,7 @@
               <span>Price/rate: <b>₦6,000</b></span>
             </div>
             <div class="card-actions">
-              <button class="btn primary">Request re-accept</button>
+              <button type="button" class="btn primary re-accept">Request re-accept</button>
             </div>
           </div>
         </section>
