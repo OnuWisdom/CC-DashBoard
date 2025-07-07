@@ -79,6 +79,7 @@ body {
 
 .logo-icon {
 	margin-left: auto;
+	margin-right: auto;
 	cursor: pointer;
 	color: #7c3aed;
 	font-size: 1.5rem;
