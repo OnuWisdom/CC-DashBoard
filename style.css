@@ -347,6 +347,11 @@ body {
 	border-color: #7c3aed;
 }
 
+.message {
+    text-decoration: none;
+    text-align: center;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
 	.sidebar {

@@ -68,65 +68,102 @@ updateDate();
 setInterval(updateDate, 60000);
 
 // Function to handle the button actions
-document.getElementById('pending').addEventListener('click', (e) => {
-    const action = e.target.dataset.action;
+// document.getElementById('pending').addEventListener('click', (e) => {
+//     const action = e.target.dataset.action;
 
-    if (!action) return;
+//     if (!action) return;
+
+//     if (action === 'accept') {
+//         const statusChip = document.querySelector('.status-chip');
+//         const cardActions = document.querySelector('#card-actions');
+//         statusChip.textContent = 'In Progress';
+//         statusChip.style.backgroundColor = '#34d399';
+//         cardActions.innerHTML = `
+//             <a href="messages.html" data-action="message" type="button" class="btn primary message" id="message"><i class="fa-solid fa-message"></i> Message client</a>
+//             <button data-action="completed" type="button" class="btn completed">Mark as completed</button>
+//         `
+
+//     } else if (action === 'decline') {
+//         const statusChip = document.querySelector('.status-chip');
+//         const cardActions = document.querySelector('#card-actions');
+//         statusChip.textContent = 'Declined';
+//         statusChip.style.backgroundColor = '#f87171';
+//         cardActions.innerHTML = `
+//             <button data-action="re-accept" type="button" class="btn primary re-accept">Request re-accept</button>
+//         `
+
+//     } else if (action === 'completed') {
+//         const statusChip = document.querySelector('.status-chip');
+//         const cardActions = document.querySelector('#card-actions');
+//         statusChip.textContent = 'Completed';
+//         statusChip.style.backgroundColor = '#6fa8ff';
+//         cardActions.innerHTML = `
+//             <button data-action="review" type="button" class="btn primary review">Request a review</button>
+//         `
+//     } else if (action === 'review') {
+//         const statusChip = document.querySelector('.status-chip');
+//         const cardActions = document.querySelector('#card-actions');
+//         statusChip.textContent = 'Completed';
+//         statusChip.style.backgroundColor = '#6fa8ff';
+//         cardActions.innerHTML = `
+//             <button data-action="review" type="button" class="btn primary review">Review Message Sent</button>
+//         `
+//     } else if (action === 're-accept') {
+//         const statusChip = document.querySelector('.status-chip');
+//         const cardActions = document.querySelector('#card-actions');
+//         statusChip.textContent = 'Pending';
+//         statusChip.style.backgroundColor = '#ffd1ba';
+//         cardActions.innerHTML = `
+//            <button data-action="accept" type="button" class="btn primary accept">Accept</button>
+//               <button data-action="decline" type="button" class="btn decline">Decline</button>
+//         `
+//     }
+// })
+
+function handleCardAction(action) {
+    const statusChip = document.querySelector('.status-chip');
+    const cardActions = document.querySelector('#card-actions');
 
     if (action === 'accept') {
-        const statusChip = document.querySelector('.status-chip');
-        const cardActions = document.querySelector('#card-actions');
         statusChip.textContent = 'In Progress';
         statusChip.style.backgroundColor = '#34d399';
         cardActions.innerHTML = `
-            <button data-action="message" type="button" class="btn primary message"><i class="fa-solid fa-message"></i> Message client</button>
+            <a href="messages.html" class="btn primary message" id="message">
+              <i class="fa-solid fa-message"></i> Message client
+            </a>
             <button data-action="completed" type="button" class="btn completed">Mark as completed</button>
-        `
-
+        `;
     } else if (action === 'decline') {
-        const statusChip = document.querySelector('.status-chip');
-        const cardActions = document.querySelector('#card-actions');
         statusChip.textContent = 'Declined';
         statusChip.style.backgroundColor = '#f87171';
         cardActions.innerHTML = `
             <button data-action="re-accept" type="button" class="btn primary re-accept">Request re-accept</button>
-        `
-     } else if (action === 'message') {
-    //     // const statusChip = document.querySelector('.status-chip');
-    //     // const cardActions = document.querySelector('#card-actions');
-    //     // statusChip.textContent = 'In Progress';
-    //     // statusChip.style.backgroundColor = '#34d399';
-    //     // cardActions.innerHTML = `
-    //     //     <button data-action="message" type="button" class="btn primary message"><i class="fa-solid fa-message"></i> Message client</button>
-    //     //     <button data-action="completed" type="button" class="btn completed">Mark as completed</button>
-    //     // `
-    document.getElementById('message').addEventListener('click', () => {
-    window.location.href = 'messages.html';})
-    
+        `;
     } else if (action === 'completed') {
-        const statusChip = document.querySelector('.status-chip');
-        const cardActions = document.querySelector('#card-actions');
         statusChip.textContent = 'Completed';
         statusChip.style.backgroundColor = '#6fa8ff';
         cardActions.innerHTML = `
             <button data-action="review" type="button" class="btn primary review">Request a review</button>
-        `
+        `;
     } else if (action === 'review') {
-        const statusChip = document.querySelector('.status-chip');
-        const cardActions = document.querySelector('#card-actions');
         statusChip.textContent = 'Completed';
         statusChip.style.backgroundColor = '#6fa8ff';
         cardActions.innerHTML = `
             <button data-action="review" type="button" class="btn primary review">Review Message Sent</button>
-        `
+        `;
     } else if (action === 're-accept') {
-        const statusChip = document.querySelector('.status-chip');
-        const cardActions = document.querySelector('#card-actions');
         statusChip.textContent = 'Pending';
         statusChip.style.backgroundColor = '#ffd1ba';
         cardActions.innerHTML = `
-           <button data-action="accept" type="button" class="btn primary accept">Accept</button>
-              <button data-action="decline" type="button" class="btn decline">Decline</button>
-        `
+            <button data-action="accept" type="button" class="btn primary accept">Accept</button>
+            <button data-action="decline" type="button" class="btn decline">Decline</button>
+        `;
     }
-})
+}
+
+['pending', 'inprogress'].forEach(id => {
+    document.getElementById(id).addEventListener('click', (e) => {
+        const action = e.target.dataset.action;
+        if (action) handleCardAction(action);
+    });
+});
