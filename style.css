@@ -348,8 +348,8 @@ body {
 }
 
 .message {
-    text-decoration: none;
-    text-align: center;
+	text-decoration: none;
+	text-align: center;
 }
 
 /* Coming Soon UI */
@@ -379,56 +379,52 @@ body {
     color: #6b7280;
 }    */
 
- .coming-soon-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    /* height: calc(100vh - 100px); adjust if you have a navbar height */
-    text-align: center;
-    padding: 2rem;
-    background: linear-gradient(to right, #7c3aed, #500bc8);
-    overlay: ;
-    color: white;
-    font-family: 'Segoe UI', sans-serif;
-  }
+.coming-soon-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	/* height: calc(100vh - 100px); adjust if you have a navbar height */
+	text-align: center;
+	padding: 2rem;
+	background: linear-gradient(to right, #7c3aed, #500bc8);
+	color: white;
+	font-family: 'Segoe UI', sans-serif;
+}
 
-  .coming-soon-content {
-    max-width: 600px;
-    animation: fadeIn 0.6s ease-in-out;
-  }
+.coming-soon-content {
+	max-width: 600px;
+	animation: fadeIn 0.6s ease-in-out;
+}
 
-  .coming-soon-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: #19c37d;
-  }
+.coming-soon-content h1 {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+	color: #19c37d;
+}
 
-  .coming-soon-content p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #43464b;
-  }
+.coming-soon-content p {
+	font-size: 1.2rem;
+	line-height: 1.6;
+	color: #43464b;
+}
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-
-
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
 
 /* Responsive */
 @media (max-width: 768px) {
 	.sidebar {
 		width: 250px;
-        z-index: 1000;
+		z-index: 1000;
 	}
 
 	/* .logo-text {
@@ -450,23 +446,19 @@ body {
 	.header-right i {
 		display: none;
 	}
-	/* .header-right i,
-	.date {
-		display: none;
-	} */
 }
 
 @media (max-width: 530px) {
 	.sidebar {
 		width: 100%;
-        z-index: 1000;
+		z-index: 1000;
 	}
 }
 
 @media (max-width: 350px) {
 	.sidebar {
 		width: 100%;
-        z-index: 1000;
+		z-index: 1000;
 	}
 
 	.cards {
